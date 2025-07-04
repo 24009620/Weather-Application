@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere - Advanced Weather Forecast</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
+<div class="app-container">
+    <div class="search-box">
+        <input type="text" name="city" id="city-input" placeholder="Enter City Name" spellcheck="false">
+        <button id="search" aria-label="Search"><i class="fas fa-search"></i></button>
+        <button id="location" aria-label="Use Current Location"><i class="fas fa-location-arrow"></i></button>
+        <button id="unit-toggle" aria-label="Toggle Temperature Unit">°C/°F</button>
+    </div>
+    <div class="error">
+        <p><i class="fas fa-exclamation-circle"></i> Invalid City Name. Please try again.</p>
+    </div>
+
+    <div class="weather">
+        <div class="weather-header">
+            <img src="images/clear.png" alt="" class="weather-icon">
+            <div class="weather-temp">
+                <h1 id="temp"></h1>
+                <p id="condition">Clear</p>
+            </div>
+        </div>
+
+        <h2 id="city">Kolkata</h2>
+        <div class="current-time"></div>
+
+        <div class="details">
+            <div class="col">
+                <img src="images/humidity.png" alt="Humidity">
+                <div>
+                    <p class="humidity"></p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/wind.png" alt="Wind Speed">
+                <div>
+                    <p class="wind"></p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/pressure.png" alt="Pressure">
+                <div>
+                    <p class="pressure"></p>
+                    <p>Pressure</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hourly Forecast Section -->
+        <div class="hourly-forecast">
+            <h3><i class="fas fa-clock"></i> Hourly Forecast</h3>
+            <div class="hourly-container" id="hourly-container">
+                <!-- Hourly items will be added here dynamically -->
+            </div>
+        </div>
+
+        <!-- 5-Day Forecast Section -->
+        <div class="daily-forecast">
+            <h3><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h3>
+            <div class="daily-container" id="daily-container">
+                <!-- Daily items will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Weather data provided by OpenWeatherMap, Pressure icon by Muhammad_Usman</p>
+        <p class="last-updated">Last updated: <span id="update-time"></span></p>
+    </div>
+</div>
+</body>
+</html>
