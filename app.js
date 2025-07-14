@@ -12,11 +12,11 @@ const updateTimeElement = document.getElementById("update-time");
 const body = document.body;
 
 // API Keys and URLs
-const weatherApiKey = '7506235127cf60aec804a6458616596d';
+const weatherApiKey = 'Your Openweathermap API key';
 const weatherURL = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
 const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?units=metric&`;
 const geolocationURL = `https://api.openweathermap.org/data/2.5/weather?units=metric&`;
-const imageApiKey = "k52Ga3LZ240SxkkyitbIcaJjMPT3J3IT5OyJEtZvstI";
+const imageApiKey = "Your Unsplash API key";
 const imageURL = "https://api.unsplash.com/search/photos?page=1&query=";
 
 // App State
